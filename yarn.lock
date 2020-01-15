@@ -5032,8 +5032,9 @@ react-is@^16.8.1, react-is@^16.8.4, react-is@^16.9.0:
   resolved "https://registry.npm.taobao.org/react-is/download/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
   integrity sha1-LMD+D7p0LZf9UnxCoTvsTusGJBw=
 
-react-native-cpp-library@../react-native-cpp-library:
+"react-native-cpp-library@https://github.com/drafish/react-native-cpp-library":
   version "1.0.0"
+  resolved "https://github.com/drafish/react-native-cpp-library#7eb72f74ebc0efcb5844e4c8fa70c0b5cea1ce5e"
 
 react-native@0.61.5:
   version "0.61.5"
