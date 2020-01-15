@@ -25,6 +25,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 const App: () => React$Node = () => {
+  console.warn(global.cppModule.runTest())
   return (
     <>
       <StatusBar barStyle="dark-content" />
