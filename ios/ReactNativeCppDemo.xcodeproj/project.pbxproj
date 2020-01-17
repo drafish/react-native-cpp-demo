@@ -20,6 +20,8 @@
 		4D1613E2C50272DB7F48D7F7 /* libPods-ReactNativeCppDemo-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAC29F1BC72B680AA5F76D2 /* libPods-ReactNativeCppDemo-tvOSTests.a */; };
 		89E87BEE2756359352AB391D /* libPods-ReactNativeCppDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FEF3DAEE73C7C95A2D19AF /* libPods-ReactNativeCppDemoTests.a */; };
 		9EC97CE4AEE232C3AAB9E838 /* libPods-ReactNativeCppDemo-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCDA862AB3EF9D7B4B43F706 /* libPods-ReactNativeCppDemo-tvOS.a */; };
+		FC46E04523D18139002F01C6 /* Mylibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = FC46E04423D18139002F01C6 /* Mylibrary.m */; };
+		FC46E04723D18299002F01C6 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC46E04623D18298002F01C6 /* Test.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,10 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		EEB2EF7A2F55C70D37204724 /* Pods-ReactNativeCppDemo-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeCppDemo-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeCppDemo-tvOS/Pods-ReactNativeCppDemo-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		FC46E04323D1812D002F01C6 /* Mylibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Mylibrary.h; path = ReactNativeCppDemo/Mylibrary.h; sourceTree = "<group>"; };
+		FC46E04423D18139002F01C6 /* Mylibrary.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = Mylibrary.m; path = ReactNativeCppDemo/Mylibrary.m; sourceTree = "<group>"; };
+		FC46E04623D18298002F01C6 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Test.cpp; path = "../node_modules/react-native-cpp-library/src/Test.cpp"; sourceTree = "<group>"; };
+		FC46E04823D182B0002F01C6 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test.h; path = "../node_modules/react-native-cpp-library/src/Test.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,10 @@
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				FC46E04823D182B0002F01C6 /* Test.h */,
+				FC46E04623D18298002F01C6 /* Test.cpp */,
+				FC46E04423D18139002F01C6 /* Mylibrary.m */,
+				FC46E04323D1812D002F01C6 /* Mylibrary.h */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
@@ -148,7 +158,6 @@
 				DB072E366BF39FCDAA54031F /* Pods-ReactNativeCppDemoTests.debug.xcconfig */,
 				27DAA7DC201E6F1C6E2ED2CE /* Pods-ReactNativeCppDemoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -308,6 +317,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -529,6 +539,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				FC46E04723D18299002F01C6 /* Test.cpp in Sources */,
+				FC46E04523D18139002F01C6 /* Mylibrary.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,6 +638,7 @@
 			baseConfigurationReference = 29CC21E90354F9EC084AA10E /* Pods-ReactNativeCppDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				INFOPLIST_FILE = ReactNativeCppDemo/Info.plist;
@@ -646,6 +659,7 @@
 			baseConfigurationReference = 44CF5CE3C3EBEC8DF20BB987 /* Pods-ReactNativeCppDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = ReactNativeCppDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

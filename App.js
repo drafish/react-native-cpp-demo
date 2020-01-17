@@ -14,6 +14,7 @@ import {
   View,
   Text,
   StatusBar,
+  NativeModules,
 } from 'react-native';
 
 import {
@@ -25,6 +26,9 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 const App: () => React$Node = () => {
+  NativeModules.Mylibrary.sampleMethod('abc', 123, (res) => {
+    console.warn(res)
+  })
   return (
     <>
       <StatusBar barStyle="dark-content" />

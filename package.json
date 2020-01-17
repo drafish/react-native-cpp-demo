@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "react": "16.9.0",
-    "react-native": "0.61.5"
+    "react-native": "0.61.5",
+    "react-native-cpp-library": "https://github.com/drafish/react-native-cpp-library.git#tradition"
   },
   "devDependencies": {
     "@babel/core": "^7.8.3",
