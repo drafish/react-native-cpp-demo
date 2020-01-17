@@ -133,6 +133,13 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+
+        externalNativeBuild {
+            ndkBuild {
+                // arguments "V=1", "NDK_DEBUG=0"
+                arguments "NDK_DEBUG=0"
+            }
+        }
     }
     splits {
         abi {
@@ -162,6 +169,11 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+    externalNativeBuild {
+        ndkBuild {
+            path file('../../node_modules/react-native-cpp-library/Android.mk')
+        }
+    }
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
         variant.outputs.each { output ->
@@ -180,8 +192,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "com.facebook.react:react-native:+"  // From node_modules
-
+//    implementation "com.facebook.react:react-native:+"  // From node_modules
+    implementation project(':ReactAndroid')     // Build from RN source
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";
         debugImplementation files(hermesPath + "hermes-debug.aar")
