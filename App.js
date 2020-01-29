@@ -24,6 +24,10 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import ToastExample from "./ToastExample";
+
+ToastExample.show("Awesome", ToastExample.SHORT);
+
 const App: () => React$Node = () => {
   return (
     <>
