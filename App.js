@@ -26,7 +26,11 @@ import {
 
 import TestExample from "./TestExample";
 
-TestExample.show("Awesome", (res) => {
+TestExample.stringFunc("abc", (res) => {
+  console.warn(res);
+});
+
+TestExample.intFunc(1, 2, (res) => {
   console.warn(res);
 });
 

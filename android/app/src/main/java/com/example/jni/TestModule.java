@@ -24,12 +24,18 @@ public class TestModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void show(String message, Callback callback) {
-    message = "C/C++返回结果:" + stringFromJNI(message);
-    callback.invoke(message);
+  public void stringFunc(String message, Callback callback) {
+    callback.invoke(stringFromJNI(message));
+  }
+
+  @ReactMethod
+  public void intFunc(int a, int b, Callback callback) {
+    callback.invoke(intFromJNI(a, b));
   }
 
   public native String stringFromJNI(String message);
+
+  public native int intFromJNI(int a, int b);
 
   static {
       System.loadLibrary("hello-jni");
