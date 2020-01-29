@@ -24,9 +24,9 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import ToastExample from "./ToastExample";
+import TestExample from "./TestExample";
 
-ToastExample.show("Awesome", (res) => {
+TestExample.show("Awesome", (res) => {
   console.warn(res);
 });
 

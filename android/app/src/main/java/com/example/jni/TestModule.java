@@ -1,5 +1,3 @@
-// ToastModule.java
-
 package com.example.jni;
 
 import com.facebook.react.bridge.NativeModule;
@@ -12,17 +10,17 @@ import com.facebook.react.bridge.Callback;
 import java.util.Map;
 import java.util.HashMap;
 
-public class ToastModule extends ReactContextBaseJavaModule {
+public class TestModule extends ReactContextBaseJavaModule {
   private static ReactApplicationContext reactContext;
 
-  public ToastModule(ReactApplicationContext reactContext) {
+  public TestModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
   }
 
   @Override
   public String getName() {
-    return "ToastExample";
+    return "TestExample";
   }
 
   @ReactMethod

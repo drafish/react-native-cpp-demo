@@ -1,5 +1,3 @@
-// CustomToastPackage.java
-
 package com.example.jni;
 
 import com.facebook.react.ReactPackage;
@@ -11,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class CustomToastPackage implements ReactPackage {
+public class TestPackage implements ReactPackage {
 
   @Override
   public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
@@ -23,7 +21,7 @@ public class CustomToastPackage implements ReactPackage {
                               ReactApplicationContext reactContext) {
     List<NativeModule> modules = new ArrayList<>();
 
-    modules.add(new ToastModule(reactContext));
+    modules.add(new TestModule(reactContext));
 
     return modules;
   }
