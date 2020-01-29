@@ -39,6 +39,13 @@ public class ToastModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void show(String message, int duration) {
+    message = message + " | " + stringFromJNI();
     Toast.makeText(getReactApplicationContext(), message, duration).show();
+  }
+
+  public native String stringFromJNI();
+
+  static {
+      System.loadLibrary("hello-jni");
   }
 }
