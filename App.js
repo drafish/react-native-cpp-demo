@@ -26,8 +26,8 @@ import {
 
 import ToastExample from "./ToastExample";
 
-ToastExample.show("Awesome", ToastExample.SHORT, (res) => {
-  console.warn(res)
+ToastExample.show("Awesome", (res) => {
+  console.warn(res);
 });
 
 const App: () => React$Node = () => {
