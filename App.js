@@ -34,11 +34,15 @@ import TestExample from "./TestExample";
 //   console.warn(res);
 // });
 
-TestExample.foo(1, 2, (res) => {
-  console.warn(res)
-})
+// TestExample.foo(1, 2, (res) => {
+//   console.warn(res)
+// })
+
 
 const App: () => React$Node = () => {
+  
+  console.warn(TestExample.runTest(2, 2));
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
