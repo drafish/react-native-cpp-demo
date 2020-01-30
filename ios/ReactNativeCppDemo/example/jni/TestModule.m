@@ -1,12 +1,15 @@
 #import "TestModule.h"
+#import "Test.h"
 
 @implementation TestExample
 
 RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(add:(NSInteger)numberA numberParameter:(NSInteger)numberB callback:(RCTResponseSenderBlock)callback)
+RCT_EXPORT_METHOD(add:(int)numberA numberParameter:(int)numberB callback:(RCTResponseSenderBlock)callback)
 {
-  NSInteger c = numberA + numberB;
+  example::Test test;
+  int c = test.add(numberA, numberB);
+//  NSInteger c = numberA + numberB;
   callback(@[@(c)]);
 }
 
