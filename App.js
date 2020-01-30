@@ -38,10 +38,13 @@ import TestExample from "./TestExample";
 //   console.warn(res)
 // })
 
+TestExample.add(1, 2, (res) => {
+  console.warn(res)
+});
 
 const App: () => React$Node = () => {
-  
-  console.warn(TestExample.runTest(2, 2));
+
+  // console.warn(TestExample.runTest(2, 2));
 
   return (
     <>
