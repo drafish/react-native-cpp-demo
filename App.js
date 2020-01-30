@@ -26,13 +26,17 @@ import {
 
 import TestExample from "./TestExample";
 
-TestExample.stringFunc("abc", (res) => {
-  console.warn(res);
-});
+// TestExample.stringFunc("abc", (res) => {
+//   console.warn(res);
+// });
 
-TestExample.intFunc(1, 2, (res) => {
-  console.warn(res);
-});
+// TestExample.intFunc(1, 2, (res) => {
+//   console.warn(res);
+// });
+
+TestExample.foo(1, 2, (res) => {
+  console.warn(res)
+})
 
 const App: () => React$Node = () => {
   return (

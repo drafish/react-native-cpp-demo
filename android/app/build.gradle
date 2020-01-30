@@ -133,6 +133,11 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        externalNativeBuild {
+            ndkBuild {
+                arguments "NDK_DEBUG=0"
+            }
+        }
     }
     splits {
         abi {
@@ -163,9 +168,12 @@ android {
         }
     }
     externalNativeBuild {
-        cmake {
-            version '3.10.2'
-            path "../../cpp/jni/CMakeLists.txt"
+        // cmake {
+        //     version '3.10.2'
+        //     path "../../cpp/jni/CMakeLists.txt"
+        // }
+        ndkBuild {
+            path file('../../cpp/cxxmodule/Android.mk')
         }
     }
     // applicationVariants are e.g. debug, release
@@ -186,7 +194,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "com.facebook.react:react-native:+"  // From node_modules
+    // implementation "com.facebook.react:react-native:+"  // From node_modules
+    implementation project(':ReactAndroid')     // Build from RN source
 
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";

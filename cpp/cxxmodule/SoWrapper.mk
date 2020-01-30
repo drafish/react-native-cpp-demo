@@ -1,0 +1,37 @@
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := fb
+
+LOCAL_SRC_FILES := \
+  $(RN_BUILD_LIB_DIR)/$(TARGET_ARCH_ABI)/libfb.so \
+
+include $(PREBUILT_SHARED_LIBRARY)
+
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := folly
+
+LOCAL_SRC_FILES := \
+  $(RN_BUILD_LIB_DIR)/$(TARGET_ARCH_ABI)/libfolly_json.so \
+
+FOLLY_FLAGS := \
+  -DFOLLY_NO_CONFIG=1 \
+  -DFOLLY_HAVE_CLOCK_GETTIME=1 \
+  -DFOLLY_HAVE_MEMRCHR=1 \
+  -DFOLLY_USE_LIBCPP=1
+LOCAL_CFLAGS += $(FOLLY_FLAGS)
+LOCAL_EXPORT_CPPFLAGS := $(FOLLY_FLAGS)
+
+include $(PREBUILT_SHARED_LIBRARY)
+
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := reactnative
+
+LOCAL_SRC_FILES := \
+  $(RN_BUILD_LIB_DIR)/$(TARGET_ARCH_ABI)/libreactnativejni.so \
+
+include $(PREBUILT_SHARED_LIBRARY)
