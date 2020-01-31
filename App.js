@@ -34,10 +34,6 @@ import TestExample from "./TestExample";
 //   console.warn(res);
 // });
 
-// TestExample.foo(1, 2, (res) => {
-//   console.warn(res)
-// })
-
 TestExample.add(1, 2, (res) => {
   console.warn(res)
 });

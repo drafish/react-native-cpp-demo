@@ -14,7 +14,7 @@ auto HelloCxxModule::getConstants() -> std::map<std::string, folly::dynamic> {
 
 auto HelloCxxModule::getMethods() -> std::vector<Method> {
   return {
-      Method("foo", [](folly::dynamic args, Callback cb) { 
+      Method("add", [](folly::dynamic args, Callback cb) { 
         example::Test test;
         int a = facebook::xplat::jsArgAsDouble(args, 0);
         int b = facebook::xplat::jsArgAsDouble(args, 1);

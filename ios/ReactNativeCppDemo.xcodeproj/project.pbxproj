@@ -20,8 +20,9 @@
 		4D1613E2C50272DB7F48D7F7 /* libPods-ReactNativeCppDemo-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAC29F1BC72B680AA5F76D2 /* libPods-ReactNativeCppDemo-tvOSTests.a */; };
 		89E87BEE2756359352AB391D /* libPods-ReactNativeCppDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FEF3DAEE73C7C95A2D19AF /* libPods-ReactNativeCppDemoTests.a */; };
 		9EC97CE4AEE232C3AAB9E838 /* libPods-ReactNativeCppDemo-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCDA862AB3EF9D7B4B43F706 /* libPods-ReactNativeCppDemo-tvOS.a */; };
-		FC7D142823E2C74700397311 /* TestModule.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7D142723E2C74700397311 /* TestModule.m */; };
 		FC7D143023E2DD1B00397311 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC7D142E23E2DD1B00397311 /* Test.cpp */; };
+		FC7D143B23E308B200397311 /* RCTHelloCxxModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = FC7D143A23E308B200397311 /* RCTHelloCxxModule.mm */; };
+		FC7D143D23E308D100397311 /* HelloCxxModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC7D143C23E308D100397311 /* HelloCxxModule.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,10 +70,12 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		EEB2EF7A2F55C70D37204724 /* Pods-ReactNativeCppDemo-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeCppDemo-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeCppDemo-tvOS/Pods-ReactNativeCppDemo-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		FC7D142623E2C74700397311 /* TestModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestModule.h; sourceTree = "<group>"; };
-		FC7D142723E2C74700397311 /* TestModule.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = TestModule.m; sourceTree = "<group>"; };
 		FC7D142E23E2DD1B00397311 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
 		FC7D142F23E2DD1B00397311 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		FC7D143923E308B200397311 /* RCTHelloCxxModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTHelloCxxModule.h; sourceTree = "<group>"; };
+		FC7D143A23E308B200397311 /* RCTHelloCxxModule.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RCTHelloCxxModule.mm; sourceTree = "<group>"; };
+		FC7D143C23E308D100397311 /* HelloCxxModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HelloCxxModule.cpp; path = ../../../../cpp/cxxmodule/HelloCxxModule.cpp; sourceTree = "<group>"; };
+		FC7D143E23E308E300397311 /* HelloCxxModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelloCxxModule.h; path = ../../../../cpp/cxxmodule/HelloCxxModule.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +137,8 @@
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
+				FC7D143823E308B200397311 /* cxxmodule */,
 				FC7D142D23E2DD1B00397311 /* src */,
-				FC7D142523E2C74700397311 /* jni */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
@@ -205,16 +208,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FC7D142523E2C74700397311 /* jni */ = {
-			isa = PBXGroup;
-			children = (
-				FC7D142623E2C74700397311 /* TestModule.h */,
-				FC7D142723E2C74700397311 /* TestModule.m */,
-			);
-			name = jni;
-			path = ReactNativeCppDemo/example/jni;
-			sourceTree = "<group>";
-		};
 		FC7D142D23E2DD1B00397311 /* src */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +216,18 @@
 			);
 			name = src;
 			path = ../cpp/src;
+			sourceTree = "<group>";
+		};
+		FC7D143823E308B200397311 /* cxxmodule */ = {
+			isa = PBXGroup;
+			children = (
+				FC7D143923E308B200397311 /* RCTHelloCxxModule.h */,
+				FC7D143A23E308B200397311 /* RCTHelloCxxModule.mm */,
+				FC7D143E23E308E300397311 /* HelloCxxModule.h */,
+				FC7D143C23E308D100397311 /* HelloCxxModule.cpp */,
+			);
+			name = cxxmodule;
+			path = ReactNativeCppDemo/example/cxxmodule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -557,8 +562,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				FC7D143D23E308D100397311 /* HelloCxxModule.cpp in Sources */,
 				FC7D143023E2DD1B00397311 /* Test.cpp in Sources */,
-				FC7D142823E2C74700397311 /* TestModule.m in Sources */,
+				FC7D143B23E308B200397311 /* RCTHelloCxxModule.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -659,8 +665,37 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/DoubleConversion\"",
+					"\"${PODS_ROOT}/Headers/Public/FBLazyVector\"",
+					"\"${PODS_ROOT}/Headers/Public/FBReactNativeSpec\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTRequired\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTTypeSafety\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Core\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTBlob\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTText\"",
+					"\"${PODS_ROOT}/Headers/Public/React-cxxreact\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsi\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsiexecutor\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsinspector\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactCommon\"",
+					"\"${PODS_ROOT}/Headers/Public/Yoga\"",
+					"\"${PODS_ROOT}/Headers/Public/glog\"",
+					"\"$(PODS_ROOT)/Headers/Private/React-Core\"",
+					"\"$(PODS_ROOT)/boost-for-react-native\"",
+					"\"$(PODS_ROOT)/Folly\"",
+				);
 				INFOPLIST_FILE = ReactNativeCppDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+					"-DFOLLY_HAVE_PTHREAD=1",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -679,8 +714,37 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CURRENT_PROJECT_VERSION = 1;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/DoubleConversion\"",
+					"\"${PODS_ROOT}/Headers/Public/FBLazyVector\"",
+					"\"${PODS_ROOT}/Headers/Public/FBReactNativeSpec\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTRequired\"",
+					"\"${PODS_ROOT}/Headers/Public/RCTTypeSafety\"",
+					"\"${PODS_ROOT}/Headers/Public/React-Core\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTBlob\"",
+					"\"${PODS_ROOT}/Headers/Public/React-RCTText\"",
+					"\"${PODS_ROOT}/Headers/Public/React-cxxreact\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsi\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsiexecutor\"",
+					"\"${PODS_ROOT}/Headers/Public/React-jsinspector\"",
+					"\"${PODS_ROOT}/Headers/Public/ReactCommon\"",
+					"\"${PODS_ROOT}/Headers/Public/Yoga\"",
+					"\"${PODS_ROOT}/Headers/Public/glog\"",
+					"\"$(PODS_ROOT)/Headers/Private/React-Core\"",
+					"\"$(PODS_ROOT)/boost-for-react-native\"",
+					"\"$(PODS_ROOT)/Folly\"",
+				);
 				INFOPLIST_FILE = ReactNativeCppDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DFOLLY_NO_CONFIG",
+					"-DFOLLY_MOBILE=1",
+					"-DFOLLY_USE_LIBCPP=1",
+					"-DFOLLY_HAVE_PTHREAD=1",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
