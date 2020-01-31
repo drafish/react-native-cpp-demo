@@ -24,7 +24,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import TestExample from "./TestExample";
+// import TestExample from "./TestExample";
 
 // TestExample.stringFunc("abc", (res) => {
 //   console.warn(res);
@@ -34,13 +34,14 @@ import TestExample from "./TestExample";
 //   console.warn(res);
 // });
 
-TestExample.add(1, 2, (res) => {
-  console.warn(res)
-});
+// TestExample.add(1, 2, (res) => {
+//   console.warn(res)
+// });
 
 const App: () => React$Node = () => {
 
   // console.warn(TestExample.runTest(2, 2));
+  console.warn(global.nativeTest.runTest(1, 2));
 
   return (
     <>

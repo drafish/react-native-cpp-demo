@@ -21,8 +21,7 @@
 		89E87BEE2756359352AB391D /* libPods-ReactNativeCppDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FEF3DAEE73C7C95A2D19AF /* libPods-ReactNativeCppDemoTests.a */; };
 		9EC97CE4AEE232C3AAB9E838 /* libPods-ReactNativeCppDemo-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCDA862AB3EF9D7B4B43F706 /* libPods-ReactNativeCppDemo-tvOS.a */; };
 		FC7D143023E2DD1B00397311 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC7D142E23E2DD1B00397311 /* Test.cpp */; };
-		FC7D143B23E308B200397311 /* RCTHelloCxxModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = FC7D143A23E308B200397311 /* RCTHelloCxxModule.mm */; };
-		FC7D143D23E308D100397311 /* HelloCxxModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC7D143C23E308D100397311 /* HelloCxxModule.cpp */; };
+		FC7D144023E3CA7400397311 /* TestBinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC7D143F23E3CA7400397311 /* TestBinding.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +48,7 @@
 		00E356F21AD99517003FC87E /* ReactNativeCppDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactNativeCppDemoTests.m; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* ReactNativeCppDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactNativeCppDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ReactNativeCppDemo/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ReactNativeCppDemo/AppDelegate.m; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = AppDelegate.m; path = ReactNativeCppDemo/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ReactNativeCppDemo/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ReactNativeCppDemo/Info.plist; sourceTree = "<group>"; };
@@ -72,10 +71,8 @@
 		EEB2EF7A2F55C70D37204724 /* Pods-ReactNativeCppDemo-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeCppDemo-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeCppDemo-tvOS/Pods-ReactNativeCppDemo-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		FC7D142E23E2DD1B00397311 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
 		FC7D142F23E2DD1B00397311 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
-		FC7D143923E308B200397311 /* RCTHelloCxxModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTHelloCxxModule.h; sourceTree = "<group>"; };
-		FC7D143A23E308B200397311 /* RCTHelloCxxModule.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RCTHelloCxxModule.mm; sourceTree = "<group>"; };
-		FC7D143C23E308D100397311 /* HelloCxxModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HelloCxxModule.cpp; path = ../../../../cpp/cxxmodule/HelloCxxModule.cpp; sourceTree = "<group>"; };
-		FC7D143E23E308E300397311 /* HelloCxxModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelloCxxModule.h; path = ../../../../cpp/cxxmodule/HelloCxxModule.h; sourceTree = "<group>"; };
+		FC7D143F23E3CA7400397311 /* TestBinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestBinding.cpp; path = ../cpp/hostobject/TestBinding.cpp; sourceTree = "<group>"; };
+		FC7D144123E3CA8700397311 /* TestBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestBinding.h; path = ../cpp/hostobject/TestBinding.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +134,8 @@
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
-				FC7D143823E308B200397311 /* cxxmodule */,
+				FC7D144123E3CA8700397311 /* TestBinding.h */,
+				FC7D143F23E3CA7400397311 /* TestBinding.cpp */,
 				FC7D142D23E2DD1B00397311 /* src */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -216,18 +214,6 @@
 			);
 			name = src;
 			path = ../cpp/src;
-			sourceTree = "<group>";
-		};
-		FC7D143823E308B200397311 /* cxxmodule */ = {
-			isa = PBXGroup;
-			children = (
-				FC7D143923E308B200397311 /* RCTHelloCxxModule.h */,
-				FC7D143A23E308B200397311 /* RCTHelloCxxModule.mm */,
-				FC7D143E23E308E300397311 /* HelloCxxModule.h */,
-				FC7D143C23E308D100397311 /* HelloCxxModule.cpp */,
-			);
-			name = cxxmodule;
-			path = ReactNativeCppDemo/example/cxxmodule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -562,10 +548,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
-				FC7D143D23E308D100397311 /* HelloCxxModule.cpp in Sources */,
 				FC7D143023E2DD1B00397311 /* Test.cpp in Sources */,
-				FC7D143B23E308B200397311 /* RCTHelloCxxModule.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				FC7D144023E3CA7400397311 /* TestBinding.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
