@@ -170,8 +170,8 @@ android {
     externalNativeBuild {
         cmake {
             version '3.10.2'
-            // path "../../cpp/jni/CMakeLists.txt"
-            path "../../cpp/hostobject/CMakeLists.txt"
+            path "../../cpp/jni/CMakeLists.txt"
+            // path "../../cpp/hostobject/CMakeLists.txt"
         }
         // ndkBuild {
         //     path file('../../cpp/cxxmodule/Android.mk')
