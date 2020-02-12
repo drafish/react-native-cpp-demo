@@ -20,8 +20,8 @@
 		4D1613E2C50272DB7F48D7F7 /* libPods-ReactNativeCppDemo-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FAC29F1BC72B680AA5F76D2 /* libPods-ReactNativeCppDemo-tvOSTests.a */; };
 		89E87BEE2756359352AB391D /* libPods-ReactNativeCppDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FEF3DAEE73C7C95A2D19AF /* libPods-ReactNativeCppDemoTests.a */; };
 		9EC97CE4AEE232C3AAB9E838 /* libPods-ReactNativeCppDemo-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCDA862AB3EF9D7B4B43F706 /* libPods-ReactNativeCppDemo-tvOS.a */; };
+		FC71BC2B23F3C8AB004E6E43 /* TestModule.m in Sources */ = {isa = PBXBuildFile; fileRef = FC71BC2A23F3C8AA004E6E43 /* TestModule.m */; };
 		FC7D143023E2DD1B00397311 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC7D142E23E2DD1B00397311 /* Test.cpp */; };
-		FC7D144023E3CA7400397311 /* TestBinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC7D143F23E3CA7400397311 /* TestBinding.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,10 +69,10 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		EEB2EF7A2F55C70D37204724 /* Pods-ReactNativeCppDemo-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeCppDemo-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeCppDemo-tvOS/Pods-ReactNativeCppDemo-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		FC71BC2923F3C8AA004E6E43 /* TestModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestModule.h; sourceTree = "<group>"; };
+		FC71BC2A23F3C8AA004E6E43 /* TestModule.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = TestModule.m; sourceTree = "<group>"; };
 		FC7D142E23E2DD1B00397311 /* Test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
 		FC7D142F23E2DD1B00397311 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
-		FC7D143F23E3CA7400397311 /* TestBinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestBinding.cpp; path = ../cpp/hostobject/TestBinding.cpp; sourceTree = "<group>"; };
-		FC7D144123E3CA8700397311 /* TestBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestBinding.h; path = ../cpp/hostobject/TestBinding.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +134,7 @@
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
-				FC7D144123E3CA8700397311 /* TestBinding.h */,
-				FC7D143F23E3CA7400397311 /* TestBinding.cpp */,
+				FC71BC2823F3C8AA004E6E43 /* jni */,
 				FC7D142D23E2DD1B00397311 /* src */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -204,6 +203,16 @@
 				2D02E4901E0B4A5D006451C7 /* ReactNativeCppDemo-tvOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FC71BC2823F3C8AA004E6E43 /* jni */ = {
+			isa = PBXGroup;
+			children = (
+				FC71BC2923F3C8AA004E6E43 /* TestModule.h */,
+				FC71BC2A23F3C8AA004E6E43 /* TestModule.m */,
+			);
+			name = jni;
+			path = ReactNativeCppDemo/example/jni;
 			sourceTree = "<group>";
 		};
 		FC7D142D23E2DD1B00397311 /* src */ = {
@@ -548,9 +557,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				FC71BC2B23F3C8AB004E6E43 /* TestModule.m in Sources */,
 				FC7D143023E2DD1B00397311 /* Test.cpp in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				FC7D144023E3CA7400397311 /* TestBinding.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
