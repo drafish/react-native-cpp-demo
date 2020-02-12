@@ -167,15 +167,20 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
-    externalNativeBuild {
-        cmake {
-            version '3.10.2'
-            path "../../cpp/jni/CMakeLists.txt"
-            // path "../../cpp/hostobject/CMakeLists.txt"
+    // externalNativeBuild {
+    //     cmake {
+    //         version '3.10.2'
+    //         path "../../cpp/jni/CMakeLists.txt"
+    //         // path "../../cpp/hostobject/CMakeLists.txt"
+    //     }
+    //     // ndkBuild {
+    //     //     path file('../../cpp/cxxmodule/Android.mk')
+    //     // }
+    // }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
         }
-        // ndkBuild {
-        //     path file('../../cpp/cxxmodule/Android.mk')
-        // }
     }
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
