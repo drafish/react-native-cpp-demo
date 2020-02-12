@@ -1,5 +1,5 @@
 #import "TestModule.h"
-#import "Test.h"
+#import <DynamicLibraryDemo/Test.h>
 
 @implementation TestExample
 
